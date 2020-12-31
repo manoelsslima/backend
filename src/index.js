@@ -2,15 +2,9 @@ const express = require('express');
 const cors = require('cors');
 const { uuid } = require('uuidv4');
 
-app.use(cors()); // para desenvolvimento
-
-/**
-app.use(cors({ // para produção
-    origin: 'http://urldofrontend.com.br';
-});
- */
-
 const app = express();
+
+app.use(cors()); // para desenvolvimento
 
 // para o express utilizar json no corpo das requisições
 app.use(express.json());
